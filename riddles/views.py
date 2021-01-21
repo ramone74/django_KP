@@ -20,6 +20,6 @@ def answer(request, riddle_id):
         return render(request, 'answer.html', {'riddle': riddle, 'error_message': 'Option does not exist'})
     else:
         if option.correct:
-            return render(request, "index.html", {"latest_riddles": Riddle.objects.order_by('-pub_date')[:5], "message": "Nice! Choose another one!"})
+            return render(request, "index.html", {"latest_riddles": Riddle.objects.order_by('-pub_date')[:5], "message": "Верно! Выберите другой вопрос"})
         else:
-            return render(request, 'answer.html', {'riddle': riddle, 'error_message': 'Wrong Answer!'})
+            return render(request, 'answer.html', {'riddle': riddle, 'error_message': 'Ответ неверный!'})

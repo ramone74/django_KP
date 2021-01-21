@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
 
-<h1>Available Riddles</h1>
+<h1>Доступные вопросы</h1>
 
 {% if message %}
     <p><strong>{{ message }}</strong></p>
@@ -21,5 +21,5 @@
     </ul>
 
 {% else %}
-    <p>No riddles are available right now.</p>
+    <p>Вопросов нет :(</p>
 {% endif %}
